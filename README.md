@@ -27,11 +27,11 @@ The `rules/local.rules` file contains 7 custom signatures designed to detect spe
 Phase 1: Defender Initialization
 On the Defender machine, run the master startup script. This script will automatically free up required ports, set the network interface to promiscuous mode, start the web/FTP honeypots in the background, and launch Snort 3 in live AFPacket mode.
 
-bash
+bash:
 sudo bash scripts/start_defender.sh
 
 Phase 2: Attack Simulation
 Switch to the Attacker machine and execute the automated attack script. This will fire the network attacks in sequence and instantly trigger the Snort rules on the Defender machine.
 
-bash
+bash:
 bash scripts/attack_sim.sh
